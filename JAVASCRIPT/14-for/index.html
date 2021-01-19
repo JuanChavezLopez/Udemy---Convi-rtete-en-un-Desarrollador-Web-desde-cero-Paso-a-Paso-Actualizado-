@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background-color: aquamarine;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+            section{
+                background-color: beige;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            
+            table{
+                margin: 0 auto;
+                border-collapse: collapse;
+            }
+
+            th{
+                color: firebrick;
+            }
+
+            th, td{
+                border: 1px dashed black;
+                padding: 7px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <section>
+            <table>
+                <caption>Tabla de multiplicar del 3</caption>
+                <tbody>
+                    <script>
+                        for( var i=1; i<=10; i++ ){
+                            document.write("<tr>");
+                            document.write("<td>3</td><td>x</td><td>"+i+"=</td><td>"+ (3*i) +"</td>");
+                            document.write("</tr>")
+                        }
+                    </script>
+                </tbody>
+            </table>
+        </section>
+    </body>
+</html>

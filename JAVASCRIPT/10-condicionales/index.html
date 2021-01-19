@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background-color: aquamarine;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+            section{
+                background-color: beige;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+         <section>
+
+             <h1>POO</h1>
+             <script>
+
+                //      IF
+                //  var precioHelado =7;
+                //  var miDinero = prompt("cuanto dinero tienes");
+                //  if (miDinero > precioHelado){
+                //      console.log("Si pueo comprar un helado.");
+                //  }
+
+                //  console.log("si podemos continuar con la ejecucion del programa..!");
+
+                //     IF ELSE
+                // var numero1 = 3;
+                // var numero2 = 3;
+
+                // if(numero1 === numero2){
+                //     console.log("Los dos son iguales...si le importa el tipo de dato.")
+                // }else{
+                //     console.log("los dos numeros no son iguales, xq tienen diferente tipo de datos")
+                // }
+
+                // ------  ELSE IF--------------
+
+                var numero1 = prompt("Introduce el primero numero");
+                var numero2 = prompt("Introduce el segundo numero");
+
+                var operacion = prompt("Que operacion quieres hacer: suma/resta/multi/divi").toLocaleLowerCase();;
+
+                if(!isNaN(numero1) && !isNaN(numero2)){
+                    if(operacion == "suma"){
+                    document.write("Escogistes una suma="+(parseInt(numero1)+parseInt(numero2)));
+                    }else if(operacion == "multi"){
+                        document.write("Escogistes una multi="+parseInt(numero1)*parseInt(numero2));
+                    }else if(operacion == "resta"){4
+                        document.write("Escogistes una resta="+(parseInt(numero1) - parseInt(numero2)));
+                    }else{
+                        document.write("Ingresa bien el texto de la operacion");
+                    }
+                    document.write("<br>");
+                }else{
+
+                    if(typeof(numero1) =="string" || typeof(numero2)=="string"){
+                        document.write("has introducido un texto.");
+                    }else{
+                        document.write("error no identificado");
+                    }
+                    
+                }
+
+
+             </script>
+         </section>3
+    </body>
+</html>

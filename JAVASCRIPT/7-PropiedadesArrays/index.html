@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background-color: aquamarine;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+            section{
+                background-color: beige;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+         <section>
+             <h1>Articulos</h1>
+             <script>
+                var articulos = ["libreta", "lapiz", "borrador", "bolso"];
+                document.write("<p>");
+                document.write(articulos[0]+"<br>");
+
+                articulos.unshift("Tijeras");/* agrega elementos al inicio del array */
+                document.write(articulos[0]+"<br>");
+                document.write("<p>");
+                document.write(articulos[articulos.length-1]+"<br>");/* devuelve el ultimo valor */
+
+                articulos.push("sacapuntas",35,"pelota");/* agrega elementos al final del array */
+                document.write(articulos[articulos.length-1]+"<br>");/* devuelve el ultimo valor */
+                
+                articulos.pop();/* elimina el ultimo elemento */
+                document.write(articulos[articulos.length-1]+"<br>");/* devuelve el ultimo valor */
+                    
+                articulos.shift();
+                
+                
+             </script>
+         </section>
+    </body>
+</html>

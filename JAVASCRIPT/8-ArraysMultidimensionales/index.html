@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background-color: aquamarine;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+            section{
+                background-color: beige;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+         <section>
+             <h1>Arrays Multidimensionales</h1>
+             <script>
+                //----------EJEMPLO 1------------------
+                // var tridi =[];
+
+                // tridi[0] = "carro";
+                // tridi[1] = "auto";
+                // tridi[2] = "moto";
+
+                // var dibi =[];
+
+                // dibi[0] = "pelota";
+                // dibi[1] = "bano";
+                // dibi[2] = "carro";
+                // dibi[3] = tridi;
+
+
+                // var uni =[];
+                // uni[0] = dibi;
+
+                // document.write("<p>");
+                // document.write(uni[0][3][0][3]);
+                // document.write("<p>");
+
+
+                // var aM = ["avion", 96, true, ["perro", "gato", 25, ["pala", "pico"], "conejo", false], "carro", "moto"];
+                // document.write("<p>");
+                // document.write(aM[3][3]);
+                // document.write("<p>");
+
+                // ------EJEMPLO 2-------------
+
+                var fruta =[];
+
+                fruta ["manzana"] =[];
+
+                fruta["manzana"]["color"] ="Roja";
+                fruta["manzana"]["forma"] ="ovalada";
+                fruta["manzana"]["sabor"] = "dulce";
+
+                fruta["manzana"]["precio"] = [];
+
+                fruta["manzana"]["precio"]["dolar"] = 1;
+                fruta["manzana"]["precio"]["euro"] =0.4;
+                fruta["manzana"]["precio"]["pesoC"] =3;
+
+                document.write("<p>");
+                
+                document.write("La manzana es de color:" + fruta["manzana"]["color"]+ "<br>");
+                document.write("La manzana tiene una forma:" + fruta["manzana"]["forma"]+ "<br>");
+                document.write("La manzana tiene un sabor:" + fruta["manzana"]["sabor"]+ "<br>");
+                document.write("La manzana cuesta en pesos Colombianos:" + fruta["manzana"]["precio"]["pesoC"]+ "<br>");
+
+             </script>
+         </section>
+    </body>
+</html>
