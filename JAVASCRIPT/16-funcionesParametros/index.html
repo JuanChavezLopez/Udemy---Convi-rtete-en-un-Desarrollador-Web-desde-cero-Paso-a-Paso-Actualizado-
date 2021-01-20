@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Funciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+            section{
+                background-color: white;
+                color: black;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+       </style>
+    </head>
+    <body>
+        <section>
+            <script>
+                // ---------------------------------------------
+
+                // ----EJEMPLO SALUDO---------
+
+                // var saludo = function(nombre){
+                //     document.write("Welcome, "+nombre);
+                // }
+                // var pre_nombre = prompt("Cual es tu nombre:");
+                // saludo(pre_nombre);
+
+
+                // ---EJEMPLO SUMA
+                
+                // var suma =function (var1, var2){
+                //     document.write("La suma es:"+(var1+var2));
+                // }
+
+                // ---------------------------------------------
+                // suma(10,7);
+                
+                // function suma(){
+                    
+                    //     var suma =0;
+                    //     var arg = arguments;
+                    //     for (i=0; i<arg.length; i++){
+                        //         suma+= parseInt(arguments[i]);
+                        //     }
+                        
+                        //     document.write("El valor de la suma, con arguments es:"+suma+"<br>");
+                        // }
+                        
+                        // suma(33,33,44,44);
+                        // suma(33,44,2,2);
+                        // suma(33,2,2);
+                        
+                // --------------------------------------------
+                
+                // function calcularIva(){
+                //     valor = prompt("Ingrese el valor para calcular el iva");
+                //     var total = valor*.19;
+                //     return "El iva de :"+valor+" es de: "+total;
+                // }
+
+                // document.write(calcularIva());
+
+
+                // ----------------------------
+                // ----FUNCIONES ANONIMAS
+
+                (function (num1, num2){
+                    document.write("La suma con funcion anonima es:"+(num1+num2));
+                })(7,5);
+
+            </script>
+            
+        </section>
+    </body>
+</html>

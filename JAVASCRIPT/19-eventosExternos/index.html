@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Funciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+
+            section{
+                background-color: white;
+                color: black;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+       </style>
+    </head>
+    <body>
+
+
+        <section style="border: 2px solid black;" onmouseover="resalta(this)" onmouseout="resalta(this)">
+            <button type="" onclick="presioname()">Presioname</button>
+
+        </section>
+        
+        <script>
+            // function presioname(){
+            //     document.write("Me has presionado.")
+            // }
+
+
+            function resalta(elemento){
+
+                switch(elemento.style.borderColor){
+                    case 'black':
+                        elemento.style.backgroundColor ='black';
+                        elemento.style.borderColor ='white';
+                        break;
+                        
+                    case 'white':
+                        elemento.style.backgroundColor ='white';
+                        elemento.style.borderColor ='black';
+                    break;
+                }
+            }
+        </script>
+    </body>
+</html>

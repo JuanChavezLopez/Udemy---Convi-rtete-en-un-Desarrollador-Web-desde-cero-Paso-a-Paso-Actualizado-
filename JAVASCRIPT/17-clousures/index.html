@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Funciones</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+
+            section{
+                background-color: white;
+                color: black;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+       </style>
+    </head>
+    <body>
+        <section>
+            <h1>Cambiador de tamanos</h1>
+            <a href="#" id="tamano14">14</a>
+            <a href="#" id="tamano18">18</a>
+            <a href="#" id="tamano24">24</a>
+            <a href="#" id="tamano30">30</a>
+            <a href="#" id="tamano40">40</a>
+            <a href="#" id="tamano50">50</a>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nobis deserunt illo aut iste minima, ea ad, cumque officiis, ratione numquam enim esse iusto quidem porro quas sint harum quod.</p>
+            
+        </section>
+        
+        <script>
+
+            // ---------EJEMPLO 1----------
+            // FUNCIONES QUE ESTAN DENTRO DE OTRAS FUNCIONES
+            // function inicia(){
+            //     var nombre ="Juan";
+            //     function mostrarNombre(){
+            //         document.write(nombre);
+            //     }
+            //     mostrarNombre();
+            // }
+
+            // inicia();
+
+
+            // -----EJEMPLO 2
+
+            // var operacion = function (){
+            //     var valor =0;
+            //     return valor+=5;
+            // }
+
+            // console.log(operacion());
+            // console.log(operacion());
+            // console.log(operacion());
+            // console.log(operacion());
+
+
+            // ---EJEMPLO 3
+
+            // var operacion = function(){
+            //     var valor= 0;
+            //     // var incrementar = function(){
+            //     return function(){
+            //         return valor+=5;
+            //     }
+
+            //     return incrementar;
+            // }
+            // var ejecutar = operacion();
+
+            // console.log(ejecutar()); /* interesante, debemos de poner entre parentesis la variable */
+            // console.log(ejecutar());
+            // console.log(ejecutar());
+            // console.log(ejecutar());
+            // console.log(ejecutar());
+            // console.log(ejecutar());
+
+
+            // ----- EJEMPLO 4
+            function log (n){
+                console.log(n);
+            }
+
+            function crearSumador(n){
+                return function(m){
+                    return n + m;
+                }
+            }
+
+            var suma10 = crearSumador(10);
+            var suma20 = crearSumador(20);
+            var suma30 = crearSumador(30);
+            // var suma40 = crearSumador(40);
+
+            log(suma10(5));  /* result: 15 */
+            log(suma20(20));   /* result: 40 */
+            log(suma30(30));   /* result: 60 */
+
+
+            function crearTamanos(pixeles){
+                return function(){
+                    document.body.style.fontSize = pixeles +'px';
+                }
+            }
+
+            var tamano14 = crearTamanos(14);
+            var tamano18 = crearTamanos(18);
+            var tamano24 = crearTamanos(24);
+            var tamano30 = crearTamanos(30);
+            var tamano40 = crearTamanos(40);
+            var tamano50 = crearTamanos(50);
+
+
+            document.getElementById('tamano14').onclick = tamano14;
+            document.getElementById('tamano18').onclick = tamano18;
+            document.getElementById('tamano24').onclick = tamano24;
+            document.getElementById('tamano30').onclick = tamano30;
+            document.getElementById('tamano40').onclick = tamano40;
+            document.getElementById('tamano50').onclick = tamano50;
+
+        </script>
+    </body>
+</html>
