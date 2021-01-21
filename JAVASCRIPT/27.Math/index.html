@@ -15,10 +15,10 @@
             }
 
             section{
-                background-color: black;
-                color: white;
+                background-color:white;
+                color: black;
                 border: 2px solid black;
-                height: auto;
+                height: 500px;
                 width: 500px;
                 margin: 0 auto;
                 padding: 10px;
@@ -38,20 +38,41 @@
     </head>
     <body>
         <section>
-            <div>
-                <button>Presioname</button>
-            </div>
-        </section>
-        <br>
-        <br>
-        <br>
-        <br>
-        <section>
-            <div>
-                <button>Presioname 2</button>
-            </div>
+            <script>
+                function write (arg){
+                    document.write(arg+"<br><br>");
+                }
+
+
+                var fecha = new Date();
+                var fecha2 = new Date(2021,3,4,12,55,44);
+                var fecha3 = new Date(2020,3,4);
+
+
+                // con el metodo get obtenemos las propieaddes
+                
+                write(fecha);
+                write(fecha2);
+                write(fecha3);
+
+                hora2 =fecha2.setHours(13);
+
+
+                var h = fecha2.getHours();
+                var m = fecha2.getMinutes();
+                var s = fecha2.getSeconds();
+
+                write("esta es la fecha :"+fecha2);
+                write(h + ":" +m+ ":" +s);
+
+                // con los metodos se modificamos las propiedades
+  
+
+            </script>
+
         </section>
 
-        <script src="js/js.js"></script>
+
+
     </body>
 </html>

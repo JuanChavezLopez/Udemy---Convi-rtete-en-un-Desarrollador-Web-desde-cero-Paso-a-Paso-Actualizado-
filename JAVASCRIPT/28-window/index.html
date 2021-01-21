@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Obtener Objetos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                height: 300vh;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+
+            section{
+                display: flex;
+                flex-wrap: wrap;
+                background-color:white;
+                color: black;
+                border: 2px solid black;
+                height: auto;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            div{
+                background-color: darkkhaki;
+                padding: 8px;
+                text-align: center;
+            }
+
+            button{
+                padding: 8px;
+            }
+
+            #boton5{
+                position: fixed;
+                background-color: red;
+                color: white;
+            }
+
+       </style>
+    </head>
+    <body>
+        <section>
+            <script>
+                function escribir(){
+                    document.getElementsByTagName('section')[0].innerHTML += "Hola<br>"
+                }
+                setInterval(escribir,2000);
+
+
+            </script>
+
+
+            <button id="boton">Abrir ventana</button>
+            <button id="boton2">Cerrar ventana</button>
+            <button id="boton3">Cambiar tamano</button>
+            <button id="boton4">Mover</button>
+            <button id="boton5">Scroll</button>
+            <button id="boton6">Ejecutar</button>
+            <button id="boton7">Detiene</button>
+            <button id="boton8">Detener intervalo</button>
+
+            <br>
+            <script>
+                function write (arg){
+                    document.write(arg+"<br><br>");
+                }
+                
+                var boton = document.getElementById('boton');
+                var boton2 = document.getElementById('boton2');
+                var boton3 = document.getElementById('boton3');
+                var boton4 = document.getElementById('boton4');
+                var boton5 = document.getElementById('boton5');
+
+                var ventana;
+                function abrirVentana(){
+                    ventana = open("http://www.google.com", "ventanapopup", "width=100, height=100");  /* muestra una pantalla con dimnsiones especificas */
+                    ventana.document.write("<h1>Este es un mensaje, para la ventana</h1>")
+                    
+                }
+                
+                function cerrarVentana(){
+                    ventana.close();
+                }
+
+                function cambiarTamano(){
+                    ventana.resizeBy(100,100);
+                    ventana.focus();
+                }
+
+                function mover(){
+                    ventana.moveBy(100,100);
+                    ventana.focus();
+                }
+
+                function scroll(){
+                    window.scrollBy(0, 50);   /* mover el scroll de manera manual */
+                }
+
+                function alerta(){
+                    alert("Hola Juan");
+                }
+
+                var t;
+                function ejecuta(){
+                    t = setTimeout(alerta, 3000);
+                }
+
+                function detener(){
+                    clearTimeout(t);
+                }
+
+                // --------------------------------
+
+                boton.addEventListener('click',abrirVentana);
+                boton2.addEventListener('click',cerrarVentana);
+                boton3.addEventListener('click',cambiarTamano);
+                boton4.addEventListener('click',mover);
+                boton5.addEventListener('click',scroll);
+                boton6.addEventListener('click',ejecuta);
+                boton7.addEventListener('click',detener);
+                
+                
+                //  METODO CONFIRM
+                
+                // var boton = document.getElementById('boton');
+                // var c = confirm("Quieres mostrar el mensaje?")
+                
+                // if (c) {
+                    //     write("Has mostrado el mensaje");
+                    // }else {
+                        //     write("No quise mostrar el mensaje.");
+                        // }
+                </script>
+
+        </section>
+
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit eligendi natus. Quibusdam sequi nam enim labore quaerat nobis similique tenetur ipsam quasi suscipit asperiores ducimus assumenda voluptas facere perferendis qui nostrum ullam non voluptatum magnam numquam, inventore sapiente doloribus.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit eligendi natus. Quibusdam sequi nam enim labore quaerat nobis similique tenetur ipsam quasi suscipit as
+            periores ducimus assumenda voluptas facere perferendis qui nostrum ullam non voluptatum magnam numquam, inventore sapiente doloribus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit eligendi natus. Quibusdam sequi nam enim labore quaerat nobis similique tenetur ipsam quasi suscipit asperiores ducimus assumenda voluptas facere perferendis qui nostrum ullam non voluptatum magnam numquam, inventore sapiente doloribus.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit eligendi natus. Quibusdam sequi nam enim labore quaerat nobis similique tenetur ipsam quasi suscipit asperiores ducimus assumenda voluptas facere perferendis qui nostrum ullam non voluptatum magnam numquam, inventore sapiente doloribus.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit eligendi natus. Quibusdam sequi nam enim labore quaerat nobis similique tenetur ipsam quasi suscipit asperiores ducimus assumenda voluptas facere perferendis qui nostrum ullam non voluptatum magnam numquam, inventore sapiente doloribus.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit eligendi natus. Quibusdam sequi nam enim labore quaerat nobis similique tenetur ipsam quasi suscipit asperiores ducimus assumenda voluptas facere perferendis qui nostrum ullam non voluptatum magnam numquam, inventore sapiente doloribus.
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit eligendi natus. Quibusdam sequi nam enim labore quaerat nobis similique tenetur ipsam quasi suscipit asperiores ducimus assumenda voluptas facere perferendis qui nostrum ullam non voluptatum magnam numquam, inventore sapiente doloribus.
+        </section>
+
+
+
+    </body>
+</html>

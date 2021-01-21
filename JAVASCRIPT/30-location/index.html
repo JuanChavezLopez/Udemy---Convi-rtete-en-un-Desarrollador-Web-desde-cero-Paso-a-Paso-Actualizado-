@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>class document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+
+            section{
+                /* display: flex;
+                flex-wrap: wrap;
+                flex-direction: column; */
+                background-color:white;
+                color: black;
+                border: 2px solid black;
+                height: 400px;
+                width: 600px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            div{
+                background-color: darkkhaki;
+                padding: 8px;
+                text-align: center;
+            }
+
+            button{
+                padding: 8px;
+            }
+
+            #boton5{
+                position: fixed;
+                background-color: red;
+                color: white;
+            }
+
+            .predefinido{
+                color: green;
+                font-size: 50px;
+            }
+
+       </style>
+    </head>
+    <body>
+        <section>
+             <button type="" onclick="cargarDocumento()">Cargar Documento</button>
+             <button type="" onclick="recarga()">Recarga</button>
+             <button type="" onclick="reemplaza()">Reeemplaza</button>
+
+            <script>
+                function write(arg){
+                    document.write(arg +"<br><br>");
+                }
+
+                // PROPIEDADES
+
+                write(location.hash);
+                write(location.host);
+                write(location.hostname);
+                write(location.href);
+                write(location.origin);
+                write(location.pathname);
+                write(location.port);
+                write(location.protocol);
+                write(location.search);
+
+                // METODOS
+
+                function cargarDocumento(){
+                    location.assign("https://google.com.co");
+                }
+                
+                function recarga(){
+                    location.reload();
+                }
+
+                function reemplaza(){
+                    location.replace("https://google.com.co");
+                }
+            </script>
+        </section>
+
+    </body>
+</html>

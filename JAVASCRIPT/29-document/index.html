@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>class document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+
+            section{
+                /* display: flex;
+                flex-wrap: wrap;
+                flex-direction: column; */
+                background-color:white;
+                color: black;
+                border: 2px solid black;
+                height: 400px;
+                width: 600px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            div{
+                background-color: darkkhaki;
+                padding: 8px;
+                text-align: center;
+            }
+
+            button{
+                padding: 8px;
+            }
+
+            #boton5{
+                position: fixed;
+                background-color: red;
+                color: white;
+            }
+
+            .predefinido{
+                color: green;
+                font-size: 50px;
+            }
+
+       </style>
+    </head>
+    <body>
+        <section>
+
+            <a href="#inicio" name="enlace"></a>
+            <h1>Hola Mundo</h1><br><br>
+
+
+            <button id="boton1" onclick="crearBoton()">click</button>
+            <button id="boton1" onclick="crearAtributo()">agregar Atributo</button>
+            
+            <form action="codigo.php" method="post">
+                <input name="input1" type="text" value="Input1 "><br>
+                <input name="input2" type="text" value="Input2 "><br>
+                <input name="input3" type="text" value="Input3 "><br>
+            </form>
+
+            <pre>
+                <script>
+                    function write(arg){
+                        document.write(arg+ "<br>");
+                    }
+
+                    write(document.title); /* nos devuelve el titulo de la pagina */
+                    write(document.anchors[0].name);
+
+                    write(document.forms[0].elements[0].value);  /* nos devuelve el valor del primer elemento */
+
+                    // write(document.forms[0].elements[1].value);
+                    // write(document.forms[0].elements[2].value);
+
+
+                    // ---------------- CREAR BOTON------------------------
+
+                    function crearBoton(){
+                        var btn = document.createElement("button"); /* CREAMOS DOCUMENTO */
+                        // btn.innerHTML="juan";
+                        document.getElementsByTagName('section')[0].appendChild(btn);
+
+                        var comentario = document.createComment("Esto es es comentario");
+                        document.getElementsByTagName('section')[0].appendChild(comentario);
+                    }
+
+                    function crearAtributo(){
+                        var h1 = document.getElementsByTagName("h1")[0];
+                        var atr = document.createAttribute("class");
+                        atr.value = "predefinido";
+                        h1.setAttributeNode(atr);
+                    }
+                </script>
+            </pre>
+        </section>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Obtener Objetos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+
+            section{
+                background-color:white;
+                color: black;
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            div{
+                background-color: darkkhaki;
+                padding: 8px;
+                text-align: center;
+            }
+
+            button{
+                padding: 8px;
+            }
+
+       </style>
+    </head>
+    <body>
+        <section>
+            <script>
+                function write (arg){
+                    document.write(arg+"<br>");
+                }
+
+                var cadena =" Esto es una cadena";
+                var obj_cadena = new String ("Esto es una cadena");
+
+                write(cadena);
+                write(cadena.charAt(2));
+                write(cadena.length);
+                write(cadena.indexOf('una', 5)); /* cadena a buscar apartir de la posicion 5 */
+                write(cadena.lastIndexOf('cadena', 15)); /*  */
+                write(cadena.replace('cadena', 'nueva cadena'));
+
+                var convertido_array = cadena.split(' ');   /* convierte una cadena de texto en array */
+                write(convertido_array);
+                write(convertido_array[3]);
+                write(cadena.substring(5, 15));
+                write(cadena.substr(5,15));
+                write(cadena.trim()); /* elimina los espacios en blanco al inicio y al final */
+                write(cadena.toLocaleLowerCase());
+                write(cadena.toLocaleUpperCase());
+                write(cadena.strike()); /* tacha con una linea al centro */
+                write(cadena.sup());
+                write(cadena.sub());
+                write(cadena.anchor("nombre_atributo_name")); /* agragamos un name al la etiqueta, con el nombre: nombre_atributo_name */
+                write(cadena.link("http://www.google.com"));
+
+                var num1 = 5, num2=7;
+                write(num1+num2);
+                num1 = num1.toString(); /* convertimos el numero1 en string */
+                write(num1+num2); /* se unen el 5 y el 7= 57 */
+
+
+            </script>
+
+        </section>
+
+
+
+    </body>
+</html>
