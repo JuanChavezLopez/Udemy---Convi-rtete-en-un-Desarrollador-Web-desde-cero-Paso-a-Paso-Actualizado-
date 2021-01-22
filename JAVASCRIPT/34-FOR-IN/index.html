@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>class document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+        background: linear-gradient(180deg, #07ebd0 0%, #3c59a6 100%);
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        padding-top: 160px;
+      }
+
+      section {
+        /* display: flex;
+                flex-wrap: wrap;
+                flex-direction: column; */
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        height: auto;
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      div {
+        background-color: darkkhaki;
+        padding: 8px;
+        text-align: center;
+      }
+
+      button {
+        padding: 8px;
+        color: white;
+        background-color: red;
+        border: none;
+      }
+
+      button:hover {
+        background-color: blue;
+        border: 4px blue initial;
+      }
+
+      #boton5 {
+        position: fixed;
+        background-color: red;
+        color: white;
+      }
+
+      .predefinido {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Arrays!!</h1>
+      <button type="" id="boton" class="btn btn-primary">Posicion</button>
+
+      <script>
+
+        function write(arg){
+            document.write(arg+"<br><br>");
+        }
+
+        write("");
+
+        var obj_literal = {
+            nombre : "JUAN CHAVEZ",
+            edad : 25,
+            colorPelo: "Negro",
+            estatura: 1.75,
+            otro_objeto:{
+              clave1:"valor 1",
+              clave2:"valor 2"
+            }
+        };
+
+        var miArray = [5,6,2,5,9];
+
+        write("----------------------------")
+        for ( x in miArray){
+          write(miArray[x]);  /* intereante para iterar arrays donde x=numero indice*/
+        }
+        
+        write("----------------------------")
+        
+        for ( i in obj_literal){
+          write("El valorde \""+i+" es\":"+obj_literal[i]);  /* intereante para iterar arrays donde x=numero indice*/
+        }
+
+      </script>
+    </section>
+  </body>
+</html>

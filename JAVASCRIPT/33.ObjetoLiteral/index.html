@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>class document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+        background: linear-gradient(180deg, #07ebd0 0%, #3c59a6 100%);
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        padding-top: 160px;
+      }
+
+      section {
+        /* display: flex;
+                flex-wrap: wrap;
+                flex-direction: column; */
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        height: auto;
+        width: 600px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      div {
+        background-color: darkkhaki;
+        padding: 8px;
+        text-align: center;
+      }
+
+      button {
+        padding: 8px;
+        color: white;
+        background-color: red;
+        border: none;
+      }
+
+      button:hover {
+        background-color: blue;
+        border: 4px blue initial;
+      }
+
+      #boton5 {
+        position: fixed;
+        background-color: red;
+        color: white;
+      }
+
+      .predefinido {
+        color: green;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Arrays!!</h1>
+      <button type="" id="boton" class="btn btn-primary">Posicion</button>
+
+      <script>
+
+        function write(arg){
+            document.write(arg+"<br><br>");
+        }
+
+        write("");
+
+        var obj_literal = {
+            nombre : "JUAN CHAVEZ",
+            edad : 25,
+            saludar: function(nombre){
+                write("Hola "+nombre+ " Como estas?");
+            },
+            estilos :{
+                 colorFondo:{
+                    rojo :[
+                    {
+                        azul1:"rojo claro",
+                        azul2:"azul oscuro",
+                        azul3:"azul oscuro"
+                    },
+                    25,
+                    "texto"
+                    ],
+                    amarillo :"amarillo",
+                    verde :"verde"
+                 }
+            }
+        };
+
+        write(obj_literal.nombre);
+        write("Tiene una edad de:"+obj_literal.edad);
+        obj_literal.saludar("Bill");
+
+        write(obj_literal.estilos.rojo[1]);
+      </script>
+    </section>
+  </body>
+</html>

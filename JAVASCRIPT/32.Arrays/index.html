@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>class document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            body{
+                background: linear-gradient(180deg, #07EBD0 0%, #3C59A6 100%);
+                font-family: Arial, Helvetica, sans-serif;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                padding-top: 160px;
+            }
+
+            section{
+                /* display: flex;
+                flex-wrap: wrap;
+                flex-direction: column; */
+                background-color:white;
+                color: black;
+                border: 2px solid black;
+                height: auto;
+                width: 600px;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            div{
+                background-color: darkkhaki;
+                padding: 8px;
+                text-align: center;
+            }
+
+            button{
+                padding: 8px;
+                color: white;
+                background-color: red;
+                border: none;
+            }
+
+            button:hover{
+                background-color: blue;
+                border: 4px blue initial;
+            }
+
+            #boton5{
+                position: fixed;
+                background-color: red;
+                color: white;
+            }
+
+            .predefinido{
+                color: green;
+                font-size: 50px;
+            }
+
+       </style>
+    </head>
+    <body>
+        <section>
+            <h1>Arrays!!</h1>
+            <button type="" id="boton" class="btn btn-primary">Posicion</button>
+            
+            <script>
+
+                function write(arg){
+                    document.write(arg+"<br><br>");
+                }
+
+                var matriz = new Array();
+                var frutas = ["limon", "naranja","banana", "manzana", "mango", "pera","pina"];
+
+                write("");
+
+                write(frutas.length);
+
+                var edades =[5,7,5,4,5,9];
+                var concatenado =  frutas.concat(edades);/* concatena dos arrays */
+                write(concatenado);
+
+                var cadena = frutas.join(); /* une todo el array en una sola cadena */
+                write(cadena);
+                write(cadena[0]);  /* devuelve la primera letra de la cadena */
+
+                write(frutas.reverse());
+
+                write(concatenado.sort());  /* ordena los elementos */
+
+                frutas.shift();
+                write(frutas);
+
+                frutas.pop();
+                write(frutas);
+
+
+                frutas.unshift("coco");
+                write(frutas);
+
+                frutas.push("melon");
+                write(frutas);
+
+                write(frutas.slice(3,6)); /*  lo que esta dentro del rango array */
+                write(frutas.splice(3,2)); /* el numero 3 es el parametro donde empieza a inicilizarse a eliminar */
+                write(frutas);
+
+
+                write(frutas.toString());
+
+
+                var edades = [22,45,2,34,21];
+
+                function revisarEdad(edad){
+                    return edad >=18;
+                }
+
+                if (edades.some(revisarEdad)){
+                    write("paso la prueba");
+                }else{
+                    write("No paso la prueba");
+                }
+
+                if(edades.every(revisarEdad)){
+                    write("paso la prueba");
+                }else{
+                    write("No paso la prueba");
+                }
+
+                var filtro = edades.filter(revisarEdad);
+                write(filtro);
+
+            
+
+            </script>
+        </section>
+
+    </body>
+</html>
